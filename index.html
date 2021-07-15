@@ -1,0 +1,41 @@
+<html>
+<body>
+<h1 style="background-color:violet;">Liver Patient Prediction</h1>
+<form action= "{{ url_for('predict')}}" method="post">
+  <label for="age">Age:</label><br>
+  <input type="text"  name="age"><br>
+  
+  <label for="age">Gender: </label>
+  <select name="gender">
+   <option name="gender" value="1">Male</option>
+   <option name="gender" value="0">Female</option>
+  </select>
+  <br>
+  <label for="tb">Total_Bilirubin:</label><br>
+  <input type="text" name="tb"><br>
+  
+  <label for="db">Direct_Bilirubin:</label><br>
+  <input type="text" name="db"><br>
+  
+  <label for="ap">Alkaline_phosphotase:</label><br>
+  <input type="text" name="ap"><br>
+  
+  <label for="aa1">Alamine_Aminotransferase:</label><br>
+  <input type="text" name="aa1"><br>
+  
+  <label for="aa2">Aspartate_Aminotransferase:</label><br>
+  <input type="text" name="aa2"><br>
+  
+  <label for="tp">Total_Protiens:</label><br>
+  <input type="text" name="tp"><br>
+  
+  <label for="a">Albumin:</label><br>
+  <input type="text" name="a"><br>
+  
+  <label for="agr">Albumin_and_Globulin_Ratio:</label><br>
+  <input type="text" name="agr"><br>
+  <button type="submit">Predict</button>
+</form>
+{{ prediction }}
+</body>
+</html>
